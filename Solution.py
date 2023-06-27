@@ -1,22 +1,23 @@
 from itertools import combinations
+                                           # combinations function from the itertools module to generate all possible combinations of elements from the list.
 class Solution:
     def __init__(self,List,target):
         self.List=List
         self.target=target
     def comb_sum(self,List,target):
-        c1=[]
-        c2=[]
+        c1=[]                              # c1 stores all possible combinations of elements from the list.
+        c2=[]          
         for r in range(len(self.List)+1):
             c1+=list(combinations(self.List,r))
         for i in c1:
             if len(i)==2 and sum(i)==self.target:
-                c2.append(list(i))
+                c2.append(list(i))        # The code then checks for pairs whose sum is equal to the target value and stores them in the c2 list
         return c2
     def flatten(self,list):
-        c3=[j for i in list for j in i]
+        c3=[j for i in list for j in i]   # The flatten method flattens the nested list list into a single list and sorts it in ascending order
         c3=sorted(c3)
         return c3
-    def comb2(self,li):
+    def comb2(self,li):                   # The comb2 method generates combinations from the flattened list and checks for combinations whose sum is equal to the double of the target value, t2.
         t2=self.target*2
         x1=[]
         x2=[]

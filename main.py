@@ -26,20 +26,25 @@ class Solution:
             if sum(i)==t2:
                 x2.append(list(i))
         return x2
-l1=[1, 3, 2, 2, -4, -6, -2, 8] 
-tar=4
+        
+l1=list(map(int,input('Enter the elements of list separated by space: ').split()))
+tar=int(input('Enter the Target: '))
 sol=Solution(l1,tar)
 n1=sol.comb_sum(l1,tar)
-print('First Combination For “4” :',n1)
+print('First Combination For',tar,':',n1)
 n2=sol.flatten(n1)
 print("Merge Into a single Array :",n2)
 n3=sol.comb2(n2)
-print("Second Combination For “8” :",n3)
+print("Second Combination For", tar*2,":",n3)
 
-#Output
-# First Combination For “4” : [[1, 3], [2, 2], [-4, 8]]
-# Merge Into a single Array : [-4, 1, 2, 2, 3, 8]
-# Second Combination For “8” : [[8], [-4, 1, 3, 8], [-4, 2, 2, 8], [1, 2, 2, 3]]
+#Sample input
+# Enter the elements of list separated by space: 10 20 30 40 50 60 70 80 90 100
+# Enter the Target: 150
+
+# #Output
+# First Combination For 150 : [[50, 100], [60, 90], [70, 80]]
+# Merge Into a single Array : [50, 60, 70, 80, 90, 100]
+# Second Combination For 300 : [[50, 60, 90, 100], [50, 70, 80, 100], [60, 70, 80, 90]]
         
             
         

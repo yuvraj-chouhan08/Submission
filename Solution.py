@@ -38,7 +38,17 @@ print("Merge Into a single Array :",n2)
 n3=sol.comb2(n2)
 print("Second Combination For", tar*2,":",n3)
 
-#Sample input
+
+#Sample input 1
+# Enter the elements of list separated by space: 
+# 1 3 2 2 -6 -4 -2 8
+# Enter the Target: 
+# 4
+# First Combination For 4 : [[1, 3], [2, 2], [-4, 8]]
+# Merge Into a single Array : [-4, 1, 2, 2, 3, 8]
+# Second Combination For 8 : [[8], [-4, 1, 3, 8], [-4, 2, 2, 8], [1, 2, 2, 3]]
+
+#Sample input 2
 # Enter the elements of list separated by space: 10 20 30 40 50 60 70 80 90 100
 # Enter the Target: 150
 
